@@ -11,7 +11,7 @@ const Hero = () => {
             </div>
             <div className='space-x-10 mt-9 centered'>
               <button className='bg-red-500'>Canvas</button>
-              <button>Slide Navigation</button>
+              <button>Slide Navigate</button>
             </div>
           </div>
         </div>
