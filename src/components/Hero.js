@@ -1,11 +1,10 @@
-// frontend/src/components/Hero.jsx
-
+// frontend/src/components/Hero.js
 import React from "react";
 import axios from 'axios';
 
 const Hero = () => {
   const handleCanvasButtonClick = () => {
-    // Make a POST request to your Python backend
+    // Make a POST request to your Python backend for canvas functionality
     axios.post('http://127.0.0.1:5000/api/aircanvas') // Adjust the URL as needed
       .then(res => {
         // Handle the response if needed
@@ -14,6 +13,19 @@ const Hero = () => {
       .catch(err => {
         // Handle errors
         console.error('Error calling air canvas function:', err);
+      });
+  };
+
+  const handleSlideNavigationButtonClick = () => {
+    // Make a POST request to your Python backend for slide navigation functionality
+    axios.post('http://127.0.0.1:5000/api/slide-navigation') // Adjust the URL as needed
+      .then(res => {
+        // Handle the response if needed
+        console.log('Slide navigation functionality implemented:', res.data.result);
+      })
+      .catch(err => {
+        // Handle errors
+        console.error('Error calling slide navigation function:', err);
       });
   };
 
@@ -27,8 +39,7 @@ const Hero = () => {
             </div>
             <div className='space-x-10 mt-9 centered'>
               <button className='bg-red-500' onClick={handleCanvasButtonClick}>Canvas</button>
-              {/* Add onClick event handler for the button */}
-              <button>Slide Navigation</button>
+              <button onClick={handleSlideNavigationButtonClick}>Slide Navigation</button>
             </div>
           </div>
         </div>
