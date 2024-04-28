@@ -7,7 +7,7 @@ import aspose.slides as slides
 import aspose.pydrawing as drawing
 import tkinter as tk
 from tkinter import filedialog
-def slide_navigation_function():
+def slide_navigation_function(filepath):
     filepath = filedialog.askopenfilename(filetypes=[("PowerPoint files", "*.pptx")])
     filepath = filepath.replace("/", "\\")
     filepath = "C:\\\\" + filepath[3:]
@@ -105,3 +105,4 @@ def slide_navigation_function():
             break
 
     return "Slide navigation functionality implemented"
+
