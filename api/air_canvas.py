@@ -129,6 +129,10 @@ def air_canvas_function():
                         thumb = (landmarks[4][0],landmarks[4][1])
                         cv2.circle(frame, center, 3, (0,255,0),-1)
                         print(center[1]-thumb[1])
+                        threshold_distance=200
+                        distance=abs(landmarks[8][1]-landmarks[4][1])
+                        if distance>threshold_distance:
+                             messagebox.showwarning("Proximity Warning","Your hand is too close to the camera!")
                         if (thumb[1]-center[1]<30):
                             bpoints.append(deque(maxlen=512))
                             blue_index += 1
