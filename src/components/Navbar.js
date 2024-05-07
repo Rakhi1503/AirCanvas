@@ -124,10 +124,10 @@ easily switch slides using their hand movements. </p>
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-md">
             <h2 className="text-2xl font-bold mb-4">Contact</h2>
-            <p>Diya Dominic.</p>
-            <p>Gowri J.</p>
-            <p>Rakhi R Panicker.</p>
-            <p>Sailakshmi Anilkumar.</p>
+            <p>Diya Dominic - 9807435674</p>
+            <p>Gowri J - 9768543865</p>
+            <p>Rakhi R Panicker - 9856342135</p>
+            <p>Sailakshmi Anilkumar - 9765498765</p>
             <button className="mt-2 px-2 py-1 bg-red-500 text-white rounded-md" onClick={handleContactModal}>
               Close
             </button>
